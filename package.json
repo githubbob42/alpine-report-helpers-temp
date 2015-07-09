@@ -1,0 +1,46 @@
+{
+  "name": "alpine-report-helpers-temp",
+  "version": "0.0.5",
+  "homepage": "https://github.com/githubbob42/alpine-report-helpers-temp",
+  "author": "",
+  "description": "Sync event processor component of alpine sync",
+  "private": false,
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "load-grunt-config": "^0.10.0",
+    "grunt-newer": "^0.7.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-jasmine-node": "^0.2.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-lintspaces": "^0.5.1"
+  },
+  "browser": {
+    "knockout": "./vendor/knockout-3.3.0.js",
+    "text": "./vendor/require/text.js",
+    "handlebars" : "./vendor/handlebars.js",
+    "accounting" : "./vendor/accounting.min.js",
+    "moment": "./vendor/moment-with-locales.min.js",
+    "moment-timezone": "./vendor/moment-timezone-with-data.min.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      "deamdify",
+      ["stringify", {
+              "extensions": [".txt", ".html"],
+              "minifier": {
+                "extensions": [".html"],
+                "options": {
+                }
+              }
+            }]
+    ]
+  },
+  "browserify-shim": {
+    "handlebars": "Handlebars"
+  },
+  "main": "index",
+  "scripts": {
+    "test": "grunt test"
+  }
+}
