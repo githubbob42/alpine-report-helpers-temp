@@ -12,7 +12,10 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-jasmine-node": "^0.2.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-lintspaces": "^0.5.1"
+    "grunt-lintspaces": "^0.5.1",
+    "stringify": "*",
+    "browserify-shim": "*",
+    "deamdify": "*"
   },
   "browser": {
     "knockout": "./vendor/knockout-3.3.0.js",

@@ -12,7 +12,9 @@ browserify index.js --standalone reportHelpers \
 > dist/alpine-report-helpers.js
 
 
-cp dist/alpine-report-helpers.js ../alpine-mobile/www/vendor/
-cp dist/alpine-report-helpers.js ../alpinereporting/assets/vendor/
-
+if [ "$1" == "--copy" ]
+then
+  cp dist/alpine-report-helpers.js ../alpine-mobile/www/vendor/
+  cp dist/alpine-report-helpers.js ../alpinereporting/assets/vendor/
+fi
 
